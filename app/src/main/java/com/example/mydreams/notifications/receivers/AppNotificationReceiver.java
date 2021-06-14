@@ -47,9 +47,8 @@ public class AppNotificationReceiver extends BroadcastReceiver {
                 NotificationCompat.Builder builder =  new NotificationCompat.Builder(context, CHANNEL_ID_DREAMS)
                         .setSmallIcon(R.mipmap.ic_launcher)
                         .setContentIntent(pendingIntent)
-                        //.setSmallIcon(R.drawable.ic_notifications_active)
                         .setContentIntent(pendingIntent)
-                        .setContentText("Replied");
+                        .setContentText("Нажмите, чтобы сохранить");
 
                 Notification notification = builder.build();
                 manager.notify(notificationId, notification);
