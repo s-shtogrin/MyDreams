@@ -99,7 +99,6 @@ public class AppNotificationManager {
         manager.notify(notificationId, notification);
     }
 
-    // !!!
     public void removeNotification(Context context) {
         Intent intent = new Intent(context, AppAlarmReceiver.class);
         PendingIntent pendingIntent = PendingIntent.getBroadcast(context, 0, intent, FLAG_CANCEL_CURRENT);
@@ -116,15 +115,13 @@ public class AppNotificationManager {
         Toast.makeText(context, "Уведомление отменено", Toast.LENGTH_SHORT).show();
     }
 
-    // todo: repeat
     public void setAlarm(Context context, long millis) {
         Intent intent = new Intent(context, AppAlarmReceiver.class);
         PendingIntent pendingIntent = PendingIntent.getBroadcast(context, 0, intent, FLAG_CANCEL_CURRENT);
 
         AlarmManager alarmManager = (AlarmManager) context.getSystemService(ALARM_SERVICE);
         Objects.requireNonNull(alarmManager)
-                //.setRepeating(AlarmManager.RTC_WAKEUP, millis, AlarmManager.INTERVAL_DAY, pendingIntent);
-                .setRepeating(AlarmManager.RTC_WAKEUP, millis, AlarmManager.INTERVAL_FIFTEEN_MINUTES, pendingIntent);
+                .setRepeating(AlarmManager.RTC_WAKEUP, millis, AlarmManager.INTERVAL_DAY, pendingIntent);
 
         notificationStatus = true;
         onNotificationListener.onStatusChanged();
