@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">MyDreams</string>
+
+    <string name="email_hint">Введите email</string>
+    <string name="password_hint">Введите пароль</string>
+
+    <string name="sign_in">Войти</string>
+    <string name="go_to_sign_up">Пока нет аккаунта?</string>
+    <string name="forgot_password">Не помню пароль</string>
+    <string name="sign_up">Зарегестрироваться</string>
+    <string name="recover_password">Сбросить пароль</string>
+
+    <string name="sign_out">Выйти</string>
+
+    <string name="notification_settings_title">Настройка уведомлений</string>
+    <string name="notification_status">Статус уведомления:</string>
+    <string name="notification_settings_option_1">Время уведомлений</string>
+    <string name="notification_settings_option_2">Отменить уведомление</string>
+
+    <string name="yes">Да</string>
+    <string name="no">Нет</string>
+
+
+    <string name="transition_name_layout">transition:LAYOUT</string>
+    <string name="transition_name_title">transition:TITLE</string>
+
+    <string name="notification_title">Доброе утро!</string>
+    <string name="notification_question">Что сегодня снилось?</string>
+
+</resources>
